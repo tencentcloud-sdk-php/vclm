@@ -18,19 +18,19 @@ namespace TencentCloud\Vclm\V20240523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SubmitImageAnimateJob返回参数结构体
+ * CheckAnimateImageJob返回参数结构体
  *
- * @method string getJobId() 获取图片跳舞任务ID。
- * @method void setJobId(string $JobId) 设置图片跳舞任务ID。
+ * @method boolean getCheckPass() 获取输入图是否通过校验。
+ * @method void setCheckPass(boolean $CheckPass) 设置输入图是否通过校验。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class SubmitImageAnimateJobResponse extends AbstractModel
+class CheckAnimateImageJobResponse extends AbstractModel
 {
     /**
-     * @var string 图片跳舞任务ID。
+     * @var boolean 输入图是否通过校验。
      */
-    public $JobId;
+    public $CheckPass;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class SubmitImageAnimateJobResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JobId 图片跳舞任务ID。
+     * @param boolean $CheckPass 输入图是否通过校验。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class SubmitImageAnimateJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("CheckPass",$param) and $param["CheckPass"] !== null) {
+            $this->CheckPass = $param["CheckPass"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
